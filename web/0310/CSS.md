@@ -141,6 +141,8 @@ HTML 요소를 선택하기 위해 사용되는 CSS구문
     a:link{color:pink;}
     a:visited{color:lightgray}
     ```
+  
+- 선택자 우선순위: impotant - 인라인 - id - 클래스 - 요소
 
 
 
@@ -150,3 +152,127 @@ HTML 요소를 선택하기 위해 사용되는 CSS구문
 - 요소들의 레이아웃
 - 그림, 섹션 요소들의 크기와 테두리, 배경 색 또는 이미지
 - 화면 전환이나 요소들의 움직임
+
+
+
+### 서체 및 텍스트
+
+- 폰트 패밀리: 비슷한 모양의 서체를 묶어서 제시. 다음 예시에서 컴퓨터에`serif`체가 없을 경우 `Arial`체 그리고 `sans-serif`체 순으로 지정된다. 패밀리내에 사용가능한 서체가 없을 경우 브라우저의 기본서체를 사용한다.
+
+  ```html
+  p{
+  	font-family: serif, Arial, sans-serif
+  }
+  ```
+
+- 서체 크기 조절: 단위로는 절대크기값 pt, 상대크기값 em, px 그리고 %등이 있음.
+
+    ```html
+    p{
+        font-size: 11pt;
+    }
+    ```
+    
+- 서체 변형: 비스듬하게, 굵게 등 서체를 변형
+
+    - Itatlic: 영문에서 자주 사용되는 비스듬한 모양의 서체
+
+        ```html
+        a{
+        	font-style: italic;
+        }
+        ```
+
+    - Bold: 굵은 서체
+
+        ```html
+        a{
+        font-weight: bold;
+        }
+        ```
+
+    - Small cap: 텍스트의 크기로 소문자를 표기
+
+        ```html
+        a{
+        	font-variant: small-caps;
+        }
+        ```
+
+- 텍스트 간격 조절
+
+    - 자간 설정: 글자 간의 간격
+
+        ```html
+        a{
+        	letter-spacing: -0.02em;
+        }
+        ```
+
+    - 단어 간격설정
+
+        ```
+        a{
+        	word-sapcing: 0.2em;
+        }
+        ```
+
+    - 행간 설정
+
+        ```html
+        a{
+        	line-height: 2em;
+        }
+        ```
+
+- 텍스트 정렬
+
+    - 가로정렬: 속성으로 left, right, center, justify(양끝정렬) 그리고 auto(기본정렬)이 있다. **블록레벨 요소에만 적용된다**. 인라인 요소에서 사용하기 위해서는 부모 요소를 블록으로 생성하고 정렬을 적용해야한다.
+
+        ```
+        p{
+            text-align: center;
+        }
+        ```
+    
+        ```html
+        <div style=text-align: left>
+            <span>왼쪽</span>
+        </div>
+        ```
+    
+    - 세로정렬: 인라인 요소와 테이블 셀에 적용되며 속성으로 text-top, top, text-bottom, bottom, super(위첨자), sub(아래첨자)의 속성을 가진다.
+    
+        ```html
+        #musical{
+        	vertical-align: text-top;
+        }
+        ```
+    
+- 글자색 표현
+
+    - 16진수표현: `color: #FFFFFF`
+    - 10진수표현: `color: rgb(255,255,255)`
+    - HSL 표현: 색조, 채도, 명조로 표현 `color: hsl(120, 100%, 25%)`
+    - 색상 키워드: `color: red;`
+
+- 배경 색 표현
+
+    | 단락의 배경 색 설정         | 문서 전체 배경 색 설정         |
+    | --------------------------- | ------------------------------ |
+    | `p{background-color:gray;}` | `body{background-color:gray;}` |
+
+- 배경 이미지 표현: 디폴트가 반복으로 되어있으며 반복을 하지 않으려면 다음 예시처럼 기술해야한다. 또한 스크롤에 따른 배경 이미지 고정도 설정할 수 있다.
+
+    ```
+    body{
+    	background-image: url("images/flower.png");
+    	background-repeat: no-repeat;
+    	background-attachment: fixed;
+    	background-position: 30px, 30px;
+    	background-size: 50%, 50%;
+    }
+    ```
+
+    
+
