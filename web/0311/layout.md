@@ -75,4 +75,33 @@ css에서는 default로 컨텐츠 블럭이 사용되며 아래와 같이 변경
   }
   ```
 
+- `table`을 이용: div를 큰 테이블로 만들고 다단 레이아웃을 셀로 처리
+
+  ```html
+  <div>
+      <nav>네비게이션 영역</nav>
+      <section>
+          <article>아티클1</article>
+          <article>아티클2</article>
+      </section>
+  </div>
+  -----------------------------------
+  div {
+  	display: table;
+  }
+  nav, section {
+  	display: table-cell;
+  }
+  ```
+
+- `flex`를 이용
+
+  ```html
+  div {
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  }
+  ```
+
 - `position: absolute`를 이용: 각각의 블록들을 절대위치로 변경하고 `top`, `bottom`, `left`, `right` 등을 이용해 위치를 지정해주어야 한다. 이 때 위치는 원점을 기준으로 한다.
