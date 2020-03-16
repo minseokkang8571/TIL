@@ -1,0 +1,22 @@
+/* 01_nav.css */
+/* 아래에 코드를 작성해 주세요. */
+nav {
+    position: fixed;
+    top: 0px;
+    height: 80px;
+    width: 100%;
+    background-color:   rgb(43, 11, 6);
+}
+.nav-items {
+    float: right;
+    word-spacing: 32px;
+    margin: 28px;
+}
+.nav-item {
+    display: inline-block;
+}
+.nav-logo {
+    height: 70px;
+    width: 210px;
+    margin: 5px 10px;
+}

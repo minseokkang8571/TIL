@@ -1,0 +1,26 @@
+/* 04_community.css */
+/* 아래에 코드를 작성해 주세요. */
+.main {
+  width: 720px;
+  height: 800px;
+  margin: 120px auto;
+}
+.free-board {
+  text-align: center;
+}
+.free-board+hr {
+  border: 2px solid rgb(245, 198, 45);
+  width: 100px;
+}
+.article-section {
+  margin: 80px 0px 0px 0px;
+}
+.articles {
+  border-bottom: 1px solid black;
+}
+.user-info {
+  text-align: right;
+}
+.article-info {
+  text-align: left;
+}

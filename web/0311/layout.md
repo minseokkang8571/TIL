@@ -94,7 +94,7 @@ css에서는 default로 컨텐츠 블럭이 사용되며 아래와 같이 변경
   }
   ```
 
-- `flex`를 이용
+- `flex`를 이용(https://d2.naver.com/helloworld/8540176)
 
   ```html
   div {
