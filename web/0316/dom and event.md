@@ -64,7 +64,7 @@ document.querySelector("submitButton").addEventListener("click", {함수})
 
 
 
-## event propagation
+### event propagation
 
 여기서 전파란 이벤트가 상위, 하위 노드로 전달되는 것을 의미하며 하위 노드에서 상위 노드로 전파되는 **버블링**(false)이 default값이다. 세 번째 인자에 true를 주면 역으로 전파되는 **캡쳐**를 사용할 수 있다.
 
