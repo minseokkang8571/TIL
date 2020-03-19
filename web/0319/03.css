@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body>section {
+    width: 800px;
+    margin: 5px;
+    border: 2px solid black;
+}
+.subject {
+    height: 50px;
+    background-color: gray;
+}
+.first-article {
+    height: 300px;
+    border: 1px solid rgba(9, 20, 20, 0.904);
+    margin: 5px;
+}
+.second-article {
+    height: 300px;
+    border: 1px solid rgba(9, 20, 20, 0.904);
+    margin: 5px;
+}
+.content p {
+    padding: 5px;
+}
+a:hover {
+    text-decoration: none;
+    color: red;
+}
+a:link {
+    text-decoration: none;
+    color: red;
+}
+a:visited {
+    text-decoration: none;
+    color: red;
+}
+.subject>span {
+    padding: 10px;
+    font-size: 2rem;
+}

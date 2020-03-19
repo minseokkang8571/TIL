@@ -1,0 +1,66 @@
+/* pdf에 정의된 초기화는 미리 작성 해두었습니다. */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 700px;
+	height: 630px;
+	border: 2px solid black;
+}
+h4 {
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+p {
+	font-size: 16px;
+	font-family: Arial;
+}
+
+/* 아래에 카드 레이아웃을 직접 만들어보세요. */
+
+.card-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	background-image: url(images/yeongumjung.jpg);
+	width: 664px;
+	height: 364px;
+	margin: 18px;
+}
+.card-bottom {
+	display: block;
+	float: bottom;
+	height: 30px;
+	background-color: rgba(87, 84, 84, 0.577);
+	
+}
+.card-h4 {
+	text-align: center;
+	color: white;
+}
+.bottom-section {
+	display: flex;
+	flex-direction: column;
+	margin: 18px;
+	width: 664px;
+	height: 212px;
+}
+.clearfix::after {
+	display: block;
+	clear: both;
+	content: "";
+}
+.bottom-syntax {
+	background-color: wheat;
+	padding: 5px;
+}
+.bottom-like {
+	background-color: rgba(182, 174, 174, 0.753);
+	padding: 5px;
+	margin-top: auto;
+}
