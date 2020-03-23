@@ -3,6 +3,8 @@
 * `flex` 이전에는 배치를 위해서 `float` , `position` 지정을 해야 했다.
 * https://www.w3.org/TR/css-flexbox-1/#box-model
 
+
+
 ## 1.1 주요 개념
 
 ![Screen Shot 2020-03-23 at 오전 10.03](images/Screen Shot 2020-03-23 at 오전 10.03.png)
@@ -57,4 +59,25 @@
 ## 1.3 참고하면 좋은 사이트
 
 **FLEXBOX FROGGY**: 이해를 돕는 게임. 위의 속성들을 체험해 볼 수 있다. [링크](https://flexboxfroggy.com/#ko)
+
+
+
+# 2. bootstrap
+
+웹사이트를 쉽게 만들 수 있게 도와주는 HTML, CSS, JS 프레임워크이다. 다양한 클래스들을 제공하며 반응형, greed, flex등을 지원한다. [부트스트랩 공식 홈페이지](https://getbootstrap.com/)에 접속하여 css와 js관련 CDN을 사용하거나 css, js파일을 다운로드 받아 사용할 수 있다.
+
+상단의 Documentation nav에 들어가면 검색기능을 사용할 수 있는데 원하는 요소를 검색하면 높은 성능의 색인으로 검색이 가능하다. 검색시에 `shift`+`Enter`를 사용하면 더 편리하게 사용 할 수 있다.
+
+부트스트랩에서는 예를 들어 다음과 같이 간단한 레이아웃을 만들 수 있다.
+
+```html
+<body>
+    <nav class="d-flex flex-column bg-primary">
+        <ul>
+            <li class="inline">Home</li>
+            <li class="inline">info</li>
+        </ul>
+    </nav>
+</body>
+```
 
