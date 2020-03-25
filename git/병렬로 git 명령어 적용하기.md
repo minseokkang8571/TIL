@@ -74,7 +74,7 @@ $ ls | xargs -IR git -C R pull origin master
 
 
 
-# 1.5 최종 명령어
+## 1.5 최종 명령어
 
 위의 요소들을 모두 적용하여 다음과 같은 명령어를 만들 수 있다.
 
@@ -83,6 +83,10 @@ ls | xargs -I{} git -C {} status
 ```
 
 
+
+# 2. 참조
+
+이 문서는 해당 [링크]([http://tech.javacafe.io/2018/12/15/%EC%97%AC%EB%9F%AC_git_%EB%A6%AC%ED%8C%8C%EC%A7%80%ED%86%A0%EB%A6%AC_%ED%95%9C%EA%BA%BC%EB%B2%88%EC%97%90_git_%EB%AA%85%EB%A0%B9%EC%96%B4_%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/](http://tech.javacafe.io/2018/12/15/여러_git_리파지토리_한꺼번에_git_명령어_적용하기/))를 참조했음.
 
 
 

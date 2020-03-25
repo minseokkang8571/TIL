@@ -64,7 +64,7 @@
 
 # 2. bootstrap
 
-웹사이트를 쉽게 만들 수 있게 도와주는 HTML, CSS, JS 프레임워크이다. 다양한 클래스들을 제공하며 반응형, greed, flex등을 지원한다. [부트스트랩 공식 홈페이지](https://getbootstrap.com/)에 접속하여 css와 js관련 CDN을 사용하거나 css, js파일을 다운로드 받아 사용할 수 있다.
+웹사이트를 쉽게 만들 수 있게 도와주는 HTML, CSS, JS 프레임워크이다. 다양한 클래스들을 제공하며 반응형, grid, flex등을 지원한다. [부트스트랩 공식 홈페이지](https://getbootstrap.com/)에 접속하여 css와 js관련 CDN을 사용하거나 css, js파일을 다운로드 받아 사용할 수 있다.
 
 상단의 Documentation nav에 들어가면 검색기능을 사용할 수 있는데 원하는 요소를 검색하면 높은 성능의 색인으로 검색이 가능하다. 검색시에 `shift`+`Enter`를 사용하면 더 편리하게 사용 할 수 있다.
 
