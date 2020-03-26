@@ -1,10 +1,10 @@
 # 1. 여러 git repository 한꺼번에 명령어 적용하기
 
-![image-20200324090027100](C:\Users\11\AppData\Roaming\Typora\typora-user-images\image-20200324090027100.png)
+
 
 다음과 같은 폴더 구조에서 하위 폴더 역시 git repository일 때 한번에 명령어를 적용하는 방법에 대해 알아본다.
 
-
+![병렬로 git 명령어 적용하기_캡처1](images/병렬로 git 명령어 적용하기_캡처1.PNG)
 
 ## 1.1 ls 명령어
 
