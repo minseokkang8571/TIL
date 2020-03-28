@@ -1,4 +1,4 @@
-# 1. django
+# 1. django 설치
 
 django는 파이썬으로 작성된 오픈 소스 웹 어플리케이션 프레임워크로, 관계형 데이터베이스 형태의 모델(**M**odel), 사용자 인터페이스인 템플릿(**T**emplates) 그리고 HTTP 요청을 처리하는 웹 템플릿 시스템인 뷰(**V**iew)로 이루어진다.
 
@@ -86,7 +86,11 @@ INSTALLED_APPS = [
 
 
 
-## 1.4 요청에 따른 응답 페이지
+# 2. -
+
+
+
+## 2.1 요청에 따른 응답 페이지
 
 요청에 따른 응답을 하는 페이지를 구성하기 위해선 앞서 언급된 MTV구조를 만들어야 한다. 이 후의 작업들은 순서는 중요하지 않다. 
 
@@ -132,5 +136,29 @@ INSTALLED_APPS = [
   <!-- 출력은 반환 딕셔너리의 key를 이용한다 !-->
   ```
 
-  
+
+
+
+## 2.2 variable routing
+
+url에 변수 요소의 값을 넣어 응답시 변수에 따른 결과를 받을 수 있다.
+
+- `url.py`: 기존의 url에 추가로 변수의 구조를 작성한다.
+
+  ```python
+  path("{url}/<{변수형}:{변수값}/", {함수})
+  # 예를 들어 다음과 같이 코드를 작성 할 수 있다
+  path("dinner/<str:menu>/<int:num>/", views.dinner)
+  ```
+
+- `views.py`: variable routing을 사용하는 url의 함수는 매개변수를 추가로 가진다. 이해를 돕기위해 위의 예시코드에 맞는 함수를 예로 든다.
+
+  ```python
+  def dinner(request, menu, num):
+      context = {
+          "menu": menu,
+          "num": num,
+      }
+      return render(request, "dinner.html", context)
+  ```
 

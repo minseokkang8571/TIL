@@ -1,0 +1,5 @@
+https://futurecreator.github.io/2019/02/25/kubernetes-cluster-on-google-compute-engine-for-developers/
+
+조대협
+
+https://zerobig-k8s.tistory.com/4
