@@ -53,3 +53,29 @@ TEMPLATES = [
 프로젝트를 만든 후 `urls.py`에선 url 요청에 대한 함수 호출을 정의 할 수 있다.  url요청의 경우 app을 통해서 이루어지는 경우가 많기 때문에 프로젝트 단의 url만을 사용할 경우 불편할 수 있다. 우리는 url정의를 `include`를 통해 app단에서 할 수 있다.
 
 먼저, 프로젝트 디렉토리에 있는 `urls.py` 에서 앞으로 사용할 **app의** `urls.py`를 등록한다. 이 때 `include`를 사용하는데 `django.urls`모듈에서 추가로 import해주어야 한다.
+
+```python
+# /urls.py
+from django.urls import include, path
+
+urlpatterns = [
+    path("articles/", include("articles.urls")),
+]
+
+```
+
+
+
+위의 코드는 `articles`라는 app의 `urls.py`를 `articles/`라는 경로에 포함시킨다는 의미로 `articles/`이후 경로를 찾기위해서 `urls.py`를 참조하게 된다.
+
+```python
+# /articles.urls.py
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path("", views.index), # articles/views.index
+]
+```
+
