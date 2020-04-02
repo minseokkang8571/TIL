@@ -86,7 +86,7 @@ INSTALLED_APPS = [
 
 
 
-# 2. -
+# 2. MTV기본
 
 
 
