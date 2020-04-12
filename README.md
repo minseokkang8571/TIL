@@ -53,11 +53,13 @@
     >푸시한 커밋 author 수정하기
     >
     >reset and revert
-
-  - k8s: docker, k8s 환경 구축 및 내용 정리
-
+    >
+  >branch
+  
+- k8s: docker, k8s 환경 구축 및 내용 정리
+  
     > docker
-
+  
     
 
 ## 2. 예정
