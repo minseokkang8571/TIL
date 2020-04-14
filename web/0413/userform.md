@@ -10,7 +10,7 @@
 
 - model
 
-	```python
+  ```python
 class User(AbstractUser):
     """
     Users within the Django authentication system are represented by this
@@ -19,9 +19,9 @@ class User(AbstractUser):
     """
     class Meta(AbstractUser.Meta):
         swappable = 'AUTH_USER_MODEL'
-	```
+  ```
 
-	```python
+  ```python
 class AbstractUser(AbstractBaseUser, PermissionsMixin):
       """
       An abstract base class implementing a fully featured User model with
@@ -88,16 +88,16 @@ class AbstractUser(AbstractBaseUser, PermissionsMixin):
 	        """Send an email to this user."""
 	        send_mail(subject, message, from_email, [self.email], **kwargs)
 	
-	```
+  ```
 	
-	```python
+  ```python
 	class PermissionsMixin(models.Model):
 	  """
 	  Add the fields and methods necessary to support the Group and Permission
 	  models using the ModelBackend.
 	  """
 	  #...#
-	```
+  ```
 	
 - form
 
@@ -138,11 +138,11 @@ from django.contrib.auth.forms import UserCreationForm
 
 - `form`인스턴스 생성
 
-	```python
+  ```python
 form = UserForm() -> form = UserCreationForm() # GET
-	# or
-	form = UserForm() -> form = UserCreationForm() # POST	
-	```
+  # or
+	form = UserForm() -> form = UserCreationForm() # POST
+  ```
 	
 - `User`인스턴스 생성
 
@@ -175,7 +175,7 @@ def signup(request):
 
 위의 `signup`함수를 이용하여 `admin`이라는 이름의 계정을 등록하면 다음과 같이 `auth_user`에 새로운 레코드가 생긴다. 여기서 **password**를 확인해보면 **해싱된 결과**이며 이 문서를 처음 작성할 때 언급했던 구현의 어려움을 해당 모듈이 해결해주고 있음을 알 수 있다.
 
-![image-20200414194900921](C:/Users/11/AppData/Roaming/Typora/typora-user-images/image-20200414194900921.png)
+![image-20200414194900921](../../../visualcode/online-lecture/0413/workshop/images/image-20200414194900921.png)
 
 
 
