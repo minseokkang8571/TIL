@@ -41,6 +41,8 @@
   > 0408 - form (django)
   >
   > 0413 - django_env in vscode, userform (django)
+  >
+  > 0414 - login_logout (django)
 
 - `linux`
 
