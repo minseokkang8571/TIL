@@ -10,105 +10,105 @@
 
 - model
 
-  ```python
+```python
 class User(AbstractUser):
+  """
+Users within the Django authentication system are represented by this
+  model.
+  Username and password are required. Other fields are optional.
+  """
+  class Meta(AbstractUser.Meta):
+      swappable = 'AUTH_USER_MODEL'
+```
+
+```python
+class AbstractUser(AbstractBaseUser, PermissionsMixin):
     """
-    Users within the Django authentication system are represented by this
-    model.
+  An abstract base class implementing a fully featured User model with
+    admin-compliant permissions.
     Username and password are required. Other fields are optional.
     """
-    class Meta(AbstractUser.Meta):
-        swappable = 'AUTH_USER_MODEL'
-  ```
+    username_validator = UnicodeUsernameValidator()
 
-  ```python
-class AbstractUser(AbstractBaseUser, PermissionsMixin):
-      """
-      An abstract base class implementing a fully featured User model with
-      admin-compliant permissions.
-      Username and password are required. Other fields are optional.
-      """
-      username_validator = UnicodeUsernameValidator()
-	
-    username = models.CharField(
-	        _('username'),
-        max_length=150,
-          unique=True,
-          help_text=_('Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.'),
-          validators=[username_validator],
-          error_messages={
-	            'unique': _("A user with that username already exists."),
-	        },
-	    )
-	    first_name = models.CharField(_('first name'), max_length=150, blank=True)
-	    last_name = models.CharField(_('last name'), max_length=150, blank=True)
-	    email = models.EmailField(_('email address'), blank=True)
-	    is_staff = models.BooleanField(
-	        _('staff status'),
-	        default=False,
-	        help_text=_('Designates whether the user can log into this admin site.'),
-	    )
-	    is_active = models.BooleanField(
-	        _('active'),
-	        default=True,
-	        help_text=_(
-	            'Designates whether this user should be treated as active. '
-	            'Unselect this instead of deleting accounts.'
-	        ),
-	    )
-	    date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
-	
-	    objects = UserManager()
-	
-	    EMAIL_FIELD = 'email'
-	    USERNAME_FIELD = 'username'
-	    REQUIRED_FIELDS = ['email']
-	
-	    class Meta:
-	        verbose_name = _('user')
-	        verbose_name_plural = _('users')
-	        abstract = True
-	
-	    def clean(self):
-	        super().clean()
-	        self.email = self.__class__.objects.normalize_email(self.email)
-	
-	    def get_full_name(self):
-	        """
-	        Return the first_name plus the last_name, with a space in between.
-	        """
-	        full_name = '%s %s' % (self.first_name, self.last_name)
-	        return full_name.strip()
-	
-	    def get_short_name(self):
-	        """Return the short name for the user."""
-	        return self.first_name
-	
-	    def email_user(self, subject, message, from_email=None, **kwargs):
-	        """Send an email to this user."""
-	        send_mail(subject, message, from_email, [self.email], **kwargs)
-	
-  ```
-	
-  ```python
-	class PermissionsMixin(models.Model):
-	  """
-	  Add the fields and methods necessary to support the Group and Permission
-	  models using the ModelBackend.
-	  """
-	  #...#
-  ```
-	
+  username = models.CharField(
+        _('username'),
+      max_length=150,
+        unique=True,
+        help_text=_('Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.'),
+        validators=[username_validator],
+        error_messages={
+            'unique': _("A user with that username already exists."),
+        },
+    )
+    first_name = models.CharField(_('first name'), max_length=150, blank=True)
+    last_name = models.CharField(_('last name'), max_length=150, blank=True)
+    email = models.EmailField(_('email address'), blank=True)
+    is_staff = models.BooleanField(
+        _('staff status'),
+        default=False,
+        help_text=_('Designates whether the user can log into this admin site.'),
+    )
+    is_active = models.BooleanField(
+        _('active'),
+        default=True,
+        help_text=_(
+            'Designates whether this user should be treated as active. '
+            'Unselect this instead of deleting accounts.'
+        ),
+    )
+    date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
+
+    objects = UserManager()
+
+    EMAIL_FIELD = 'email'
+    USERNAME_FIELD = 'username'
+    REQUIRED_FIELDS = ['email']
+
+    class Meta:
+        verbose_name = _('user')
+        verbose_name_plural = _('users')
+        abstract = True
+
+    def clean(self):
+        super().clean()
+        self.email = self.__class__.objects.normalize_email(self.email)
+
+    def get_full_name(self):
+        """
+        Return the first_name plus the last_name, with a space in between.
+        """
+        full_name = '%s %s' % (self.first_name, self.last_name)
+        return full_name.strip()
+
+    def get_short_name(self):
+        """Return the short name for the user."""
+        return self.first_name
+
+    def email_user(self, subject, message, from_email=None, **kwargs):
+        """Send an email to this user."""
+        send_mail(subject, message, from_email, [self.email], **kwargs)
+
+```
+
+```python
+class PermissionsMixin(models.Model):
+  """
+  Add the fields and methods necessary to support the Group and Permission
+  models using the ModelBackend.
+"""
+  #...#
+```
+
 - form
 
-  ```python
-  class UserCreationForm(forms.ModelForm):
-      """
-      A form that creates a user, with no privileges, from the given username and
-      password.
-      """
-      #...#
-  ```
+```python
+class UserCreationForm(forms.ModelForm):
+    """
+    A form that creates a user, with no privileges, from the given username and
+    password.
+    """
+    #...#
+```
 
 
 
@@ -137,21 +137,18 @@ from django.contrib.auth.forms import UserCreationForm
 기본적으로 `ModelForm`과 `Model`을 상속한 인스턴스를 만들기 때문에 인스턴스를 만드는 두 함수를 사용하는 것 외엔 큰 차이가 없다.
 
 - `form`인스턴스 생성
-
-  ```python
+```python
 form = UserForm() -> form = UserCreationForm() # GET
-  # or
-	form = UserForm() -> form = UserCreationForm() # POST
-  ```
-	
+# or
+form = UserForm() -> form = UserCreationForm() # POST
+```
+
 - `User`인스턴스 생성
-
-  ```python
-  user = User() # User라는 모델 클래스를 사용할 경우
-  ->
-  user = get_user_model() # django 라이브러리에 정의된 auth_user사용
-  ```
-
+```python
+user = User() # User라는 모델 클래스를 사용할 경우
+->
+user = get_user_model() # django 라이브러리에 정의된 auth_user사용
+```
 
 
 다음은 회원가입의 의미를 가지는 코드이다. 기존의 form과 사용방식은 동일하지만, `UserCreationForm`으로부터 반환된 form을 사용했기 때문에 `auth_user`에 사용자 정보를 저장한다.
@@ -175,9 +172,5 @@ def signup(request):
 
 위의 `signup`함수를 이용하여 `admin`이라는 이름의 계정을 등록하면 다음과 같이 `auth_user`에 새로운 레코드가 생긴다. 여기서 **password**를 확인해보면 **해싱된 결과**이며 이 문서를 처음 작성할 때 언급했던 구현의 어려움을 해당 모듈이 해결해주고 있음을 알 수 있다.
 
-![image-20200414194900921](../../../visualcode/online-lecture/0413/workshop/images/image-20200414194900921.png)
-
-
-
-
+![image-20200414194900921](images/image-20200414194900921.png)
 
