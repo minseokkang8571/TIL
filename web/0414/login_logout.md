@@ -90,11 +90,11 @@ auth_login(request, form.get_user())
 
 - 쿠키
 
-  ![image-20200414211303806](C:/Users/11/AppData/Roaming/Typora/typora-user-images/image-20200414211303806.png)
+  ![image-20200414211303806](images/image-20200414211303806.png)
 
 - 세션
 
-  ![image-20200414211405878](C:/Users/11/AppData/Roaming/Typora/typora-user-images/image-20200414211405878.png)
+  ![image-20200414211405878](images/image-20200414211405878.png)
 
 
 
