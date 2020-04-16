@@ -59,8 +59,10 @@
     >reset and revert
     >
     >branch
+    >
+    >git bash 환경에서 wget추가하기
   
-- k8s: docker, k8s 환경 구축 및 내용 정리
+- `k8s`: docker, k8s 환경 구축 및 내용 정리
   
     > docker
   
