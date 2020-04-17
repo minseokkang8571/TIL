@@ -189,3 +189,7 @@ dmypy.json
 # Pyre type checker
 
 # End of https://www.gitignore.io/api/linux,django,python,cloud9
+
+# myfile
+k8s/docker/docker/
+k8s/docker/ubuntu_bionic64.box
