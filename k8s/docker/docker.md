@@ -93,5 +93,5 @@ $ vagrant plugin install vagrant-vbguest
     
 - provisioning 결과 (초기 `id`/`pwd`는 `vagrant`/`vagrant`)
 
-![image-20200417162635230](C:/Users/11/AppData/Roaming/Typora/typora-user-images/image-20200417162635230.png)
+![image-20200417162635230](images/image-20200417162635230.png)
 
