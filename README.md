@@ -65,7 +65,9 @@
 - `k8s`: docker, k8s 환경 구축 및 내용 정리
   
     > docker
-  
+  >
+    > vagrant box만들기
+    
     
 
 ## 2. 예정
