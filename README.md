@@ -66,8 +66,10 @@
   
     > docker
   >
-    > vagrant box만들기
-    
+  > vagrant box만들기
+  >
+  > vagrant RawFile#0 에러
+  
     
 
 ## 2. 예정
