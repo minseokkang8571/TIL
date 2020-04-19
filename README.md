@@ -49,9 +49,11 @@
   - linux: 리눅스의 기본명령어, vim의 활용 등
 
     >linux 기본 명령어1
+  >
+    >ubuntu 기초 세팅
 
   - git: git의 활용 정리
-
+  
     >병렬로 git 명령어 적용하기
     >
     >푸시한 커밋 author 수정하기
