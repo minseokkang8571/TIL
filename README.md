@@ -49,7 +49,7 @@
   - linux: 리눅스의 기본명령어, vim의 활용 등
 
     >linux 기본 명령어1
-  >
+    >
     >ubuntu 기초 세팅
 
   - git: git의 활용 정리
