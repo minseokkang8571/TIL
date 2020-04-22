@@ -45,6 +45,8 @@
   > 0414 - login_logout (django)
   >
   > 0420 - DB기본
+  >
+  > 0421 - comment (django)
 
 - `linux`
 
