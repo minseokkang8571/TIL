@@ -58,13 +58,15 @@
 
   - git: git의 활용 정리
   
-    >병렬로 git 명령어 적용하기
-    >
-    >푸시한 커밋 author 수정하기
+    >diff
     >
     >reset and revert
     >
     >branch
+    >
+    >병렬로 git 명령어 적용하기
+    >
+    >푸시한 커밋 author 수정하기
     >
     >git bash 환경에서 wget추가하기
   
