@@ -47,6 +47,8 @@
   > 0420 - DB기본
   >
   > 0421 - comment (django)
+  >
+  > 0428 - follow and like (django)
 
 - `linux`
 
