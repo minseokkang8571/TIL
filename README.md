@@ -49,6 +49,8 @@
   > 0421 - comment (django)
   >
   > 0428 - follow and like (django)
+  >
+  > 0511 - serializer (django)
 
 - `linux`
 
