@@ -51,6 +51,8 @@
   > 0428 - follow and like (django)
   >
   > 0511 - serializer (django)
+  >
+  > 0601 - vue (vue)
 
 - `linux`
 
