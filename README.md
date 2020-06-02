@@ -53,6 +53,8 @@
   > 0511 - serializer (django)
   >
   > 0601 - vue (vue)
+  >
+  > 0602 - SPA (vue)
 
 - `linux`
 
