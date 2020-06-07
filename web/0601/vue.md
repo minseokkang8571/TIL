@@ -40,11 +40,23 @@ vue --version
 
 ### 1.1.1 Visual code 세팅
 
-프로젝트 진행환경인 VS code에서 편리하게 vue를 개발하기 위해 몇가지 Extension을 설치한다.
+- 프로젝트 진행환경인 VS code에서 편리하게 vue를 개발하기 위해 몇가지 Extension을 설치한다.
 
-- Vetur: 자동완성, 디버깅편의성 등 여러기능을 제공
-- DotENV: 문법 하이라이팅
-- vscode-icons: 직관적인 아이콘
+  - Vetur: 자동완성, 디버깅편의성 등 여러기능을 제공
+  - DotENV: 문법 하이라이팅
+  - vscode-icons: 직관적인 아이콘
+
+- vue환경의 탭사이즈를 2칸으로 설정한다.
+
+  - `ctrl`+`shift`+`p`로 세팅 검색창을 열고, **Open Settings (JSON)**을 검색
+
+  - 다음과 같이 설정을 추가
+
+    ```json
+    "[vue]": {
+        "editor.tabSize": 2
+    },
+    ```
 
 
 
