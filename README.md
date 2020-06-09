@@ -61,6 +61,8 @@
   > 0605 - 프로젝트 배포 (netlify)
   >
   > 0608 - 가상환경 (python)
+  >
+  > 0609 - django api server
 
 - `linux`
 
