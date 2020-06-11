@@ -63,6 +63,8 @@
   > 0608 - 가상환경 (python)
   >
   > 0609 - django api server
+  >
+  > 0611 - string to Date (vue)
 
 - `linux`
 
