@@ -4,7 +4,7 @@ git으로 branch를 이용해 작업을 하다 팀원의 요청이나 필요에 
 
 stash 명령을 사용하면 워킹 디렉토리내에 변화된 내용을 보관하고 워킹 트리를 비울 수 있다. 즉, branch이동에 제약이 사라지게된다. 예를 들어 branch 이동시에는 다음과 같이 사용할 수 있다. 
 
-branch A (변경내용있음) **->** stash **->** branch A (변경내용 없음) **->** branch B 이슈 처리 후 branch A로 이동 **->** stash pop
+branch A (변경내용 있음) **->** stash **->** branch A (변경내용 없음) **->** branch B 이슈 처리 후 branch A로 이동 **->** stash pop
 
 
 
