@@ -82,6 +82,8 @@
     >
     >branch
     >
+    >stash
+    >
     >병렬로 git 명령어 적용하기
     >
     >푸시한 커밋 author 수정하기
