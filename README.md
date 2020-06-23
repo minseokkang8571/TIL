@@ -6,7 +6,7 @@
 
 ## 1. 구성
 
-- `web`: HTML, CSS, bootstrap 그리고 django 프레임워크에 대한 내용을 기술. 내용을 일별로 분류.
+- `web`: HTML, CSS, bootstrap 그리고 django, vue에 대한 내용을 기술. 내용을 일별로 분류.
 
   > 0309 - HTML5
   >
