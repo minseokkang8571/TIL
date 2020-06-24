@@ -74,8 +74,10 @@
 
     >linux 기본 명령어1
     >
+    >linux 기본 명령어2
+  >
     >ubuntu 기초 세팅
-
+  
   - git: git의 활용 정리
   
     >diff
