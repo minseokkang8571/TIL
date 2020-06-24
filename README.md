@@ -116,6 +116,7 @@
   - bootstrap: https://getbootstrap.com/
   - fontawesome: https://fontawesome.com/
   - django: https://www.djangoproject.com/
+  - vue: https://kr.vuejs.org/v2/guide/index.html
 - k8s
 
   - kubernetes 튜토리얼: https://kubernetes.io/ko/docs/tutorials/
@@ -124,4 +125,6 @@
 
 - git
   - gitignore: https://www.gitignore.io/
+  - git-scm: https://git-scm.com/
+  - 누구나 쉽게 이해할 수 있는 Git 입문: https://backlog.com/git-tutorial/kr/
 
