@@ -28,7 +28,7 @@ xhr.send();
 
 
 
- ![image-20200625162846252](C:/Users/11/AppData/Roaming/Typora/typora-user-images/image-20200625162846252.png)
+ ![image-20200625162846252](images/image-20200625162846252.png)
 
 > **naver와 stackoverflow간 CORS**
 
