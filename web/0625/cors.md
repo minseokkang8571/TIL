@@ -45,7 +45,7 @@ CORS 정책을 작동시키기 위해 client의 request헤더에는 요청을 �
 즉, Access-Control-Allow-Origin에 Origin의 주소가 포함되어 있다면 **정상적으로 페이지를 표현** 할 수 있다는 것이다. (CORS가 발생하더라도 응답코드는 200이다) 우리는 여기서 두가지를 고려해야한다.
 
 1. 어떻게 Access-Control-Allow-Origin에 호스트를 등록하는가?
-2. CORS 정책에 걸려도 왜 200 response를 보내는가? (1.3에서 다룸)
+2. CORS 정책에 걸려도 왜 응답 상태가 200 인가? (1.3에서 다룸)
 
 
 
@@ -99,7 +99,7 @@ CORS_ORIGIN_WHITELIST = [
 
 오직 서버와 클라이언트의 관점에서 생각하다보면 여러 이상한 점들이 있다.
 
-1. CORS정책에 걸려도 서버는 200을 응답한다.
+1. CORS정책에 걸려도 서버는 200의 응답상태를 가진다. (response 개체의 status는 0)
 2. 서버 프레임워크에서 API로 요청을 해도 CORS에 걸리지 않는다.
 
 
