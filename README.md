@@ -67,6 +67,8 @@
   > 0611 - string to Date (vue)
   >
   > 0622 - 1학기 관통프로젝트 배운점
+  >
+  > 0625 - cors
 
 - `linux`
 
