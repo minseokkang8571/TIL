@@ -86,6 +86,8 @@
   
     >diff
     >
+    >reflog
+    >
     >reset and revert
     >
     >branch
