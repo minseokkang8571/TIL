@@ -99,6 +99,8 @@
     >푸시한 커밋 author 수정하기
     >
     >git bash 환경에서 wget추가하기
+    >
+    >fork한 저장소 싱크 맞추기
   
 - `k8s`: docker, k8s 환경 구축 및 내용 정리
   
