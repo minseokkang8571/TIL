@@ -76,41 +76,41 @@
 
   - linux: 리눅스의 기본명령어, vim의 활용 등
 
-    >[linux 기본 명령어1](https://github.com/minseokkang8571/TIL/tree/master/linux/linux/linux 기본 명령어1)
+    >[linux 기본 명령어1](https://github.com/minseokkang8571/TIL/tree/master/linux/linux/linux%20기본%20명령어1)
     >
-    >[linux 기본 명령어2](https://github.com/minseokkang8571/TIL/tree/master/linux/linux/linux 기본 명령어2)
+    >[linux 기본 명령어2](https://github.com/minseokkang8571/TIL/tree/master/linux/linux/linux%20기본%20명령어2)
     >
-    >[ubuntu 기초 세팅](https://github.com/minseokkang8571/TIL/tree/master/linux/linux/ubuntu 기초 세팅)
-  
+    >[ubuntu 기초 세팅](https://github.com/minseokkang8571/TIL/tree/master/linux/linux/ubuntu%20기초%20세팅)
+
   - git: git의 활용 정리
-  
+
     >[diff](https://github.com/minseokkang8571/TIL/tree/master/linux/git/diff)
     >
     >[reflog](https://github.com/minseokkang8571/TIL/tree/master/linux/git/reflog)
     >
-    >[reset and revert](https://github.com/minseokkang8571/TIL/tree/master/linux/git/reset and revert)
+    >[reset and revert](https://github.com/minseokkang8571/TIL/tree/master/linux/git/reset%20and%20revert)
     >
     >[branch](https://github.com/minseokkang8571/TIL/tree/master/linux/git/branch)
     >
     >[stash](https://github.com/minseokkang8571/TIL/tree/master/linux/git/stash)
     >
-    >[병렬로 git 명령어 적용하기](https://github.com/minseokkang8571/TIL/tree/master/linux/git/병렬로 git 명령어 적용하기)
+    >[병렬로 git 명령어 적용하기](https://github.com/minseokkang8571/TIL/tree/master/linux/git/병렬로%20git%20명령어%20적용하기)
     >
-    >[푸시한 커밋 author 수정하기](https://github.com/minseokkang8571/TIL/tree/master/linux/git/푸시한 커밋 author 수정하기)
+    >[푸시한 커밋 author 수정하기](https://github.com/minseokkang8571/TIL/tree/master/linux/git/푸시한%20커밋%20author%20수정하기)
     >
-    >[git bash 환경에서 wget추가하기](https://github.com/minseokkang8571/TIL/tree/master/linux/git/git bash 환경에서 wget추가하기)
+    >[git bash 환경에서 wget추가하기](https://github.com/minseokkang8571/TIL/tree/master/linux/git/git%20bash 환경에서%20wget추가하기)
     >
-    >[fork한 저장소 싱크 맞추기](https://github.com/minseokkang8571/TIL/tree/master/linux/git/fork한 저장소 싱크 맞추기)
-  
+    >[fork한 저장소 싱크 맞추기](https://github.com/minseokkang8571/TIL/tree/master/linux/git/fork한%20저장소%20싱크%20맞추기)
+
 - `k8s`: docker, k8s 환경 구축 및 내용 정리
-  
-    > [docker](https://github.com/minseokkang8571/TIL/tree/master/k8s/docker)
+
+  > [docker](https://github.com/minseokkang8571/TIL/tree/master/k8s/docker)
   >
-  > [vagrant box만들기](https://github.com/minseokkang8571/TIL/tree/master/k8s/vagrant box만들기)
+  > [vagrant box만들기](https://github.com/minseokkang8571/TIL/tree/master/k8s/vagrant%20box만들기)
   >
-  > [vagrant RawFile#0 에러](https://github.com/minseokkang8571/TIL/tree/master/k8s/vagrant RawFile#0 에러)
+  > [vagrant RawFile#0 에러](k8s/vagrant%20RawFile#0%20에러)
+
   
-    
 
 ## 2. 예정
 
