@@ -98,7 +98,7 @@
     >
     >[푸시한 커밋 author 수정하기](https://github.com/minseokkang8571/TIL/tree/master/linux/git/푸시한%20커밋%20author%20수정하기)
     >
-    >[git bash 환경에서 wget추가하기](https://github.com/minseokkang8571/TIL/tree/master/linux/git/git%20bash 환경에서%20wget추가하기)
+    >[git bash 환경에서 wget추가하기](https://github.com/minseokkang8571/TIL/tree/master/linux/git/git%20bash%20환경에서%20wget%20추가하기)
     >
     >[fork한 저장소 싱크 맞추기](https://github.com/minseokkang8571/TIL/tree/master/linux/git/fork한%20저장소%20싱크%20맞추기)
 
@@ -108,7 +108,7 @@
   >
   > [vagrant box만들기](https://github.com/minseokkang8571/TIL/tree/master/k8s/vagrant%20box만들기)
   >
-  > [vagrant RawFile#0 에러](k8s/vagrant%20RawFile#0%20에러)
+  > [vagrant RawFile#0 에러](https://github.com/minseokkang8571/TIL/tree/master/k8s/vagrant%20RawFile%230%20에러)
 
   
 
