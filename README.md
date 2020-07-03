@@ -8,107 +8,107 @@
 
 - `web`: HTML, CSS, bootstrap 그리고 django, vue에 대한 내용을 기술. 내용을 일별로 분류.
 
-  > 0309 - HTML5
+  > [0309 - HTML5](https://github.com/minseokkang8571/TIL/tree/master/web/0309)
   >
-  > 0310 - CSS
+  > [0310 - CSS](https://github.com/minseokkang8571/TIL/tree/master/web/0310)
   >
-  > 0311 - layout
+  > [0311 - layout](https://github.com/minseokkang8571/TIL/tree/master/web/0311)
   >
-  > 0312 - javascript
+  > [0312 - javascript](https://github.com/minseokkang8571/TIL/tree/master/web/0312)
   >
-  > 0313 - array and function (JS)
+  > [0313 - array and function (JS)](https://github.com/minseokkang8571/TIL/tree/master/web/0313)
   >
-  > 0316 - dom and evend (JS)
+  > [0316 - dom and evend (JS)](https://github.com/minseokkang8571/TIL/tree/master/web/0316)
   >
-  > 0317 - card (bootstrap)
+  > [0317 - card (bootstrap)](https://github.com/minseokkang8571/TIL/tree/master/web/0317)
   >
-  > 0318 - class (JS)
+  > [0318 - class (JS)](https://github.com/minseokkang8571/TIL/tree/master/web/0318)
   >
-  > 0319 - 상대위치, 절대위치 (CSS)
+  > [0319 - 상대위치, 절대위치 (CSS)](https://github.com/minseokkang8571/TIL/tree/master/web/0319)
   >
-  > 0323 - flex (CSS)
+  > [0323 - flex (CSS)](https://github.com/minseokkang8571/TIL/tree/master/web/0323)
   >
-  > 0324 - grid (bootstrap)
+  > [0324 - grid (bootstrap)](https://github.com/minseokkang8571/TIL/tree/master/web/0324)
   >
-  > 0326~0327 - django environment
+  > [0326~0327 - django environment](https://github.com/minseokkang8571/TIL/tree/master/web/0326~0327)
   >
-  > 0330 - django rule, DTL
+  > [0330 - django rule, DTL](https://github.com/minseokkang8571/TIL/tree/master/web/0330)
   >
-  > 0331~0401 - model (django)
+  > [0331~0401 - model (django)](https://github.com/minseokkang8571/TIL/tree/master/web/0331~0401)
   >
-  > 0406~0407 - POST, url tag (django)
+  > [0406~0407 - POST, url tag (django)](https://github.com/minseokkang8571/TIL/tree/master/web/0406~0407)
   >
-  > 0408 - form (django)
+  > [0408 - form (django)](https://github.com/minseokkang8571/TIL/tree/master/web/0408)
   >
-  > 0413 - django_env in vscode, userform (django)
+  > [0413 - django_env in vscode, userform (django)](https://github.com/minseokkang8571/TIL/tree/master/web/0413)
   >
-  > 0414 - login_logout (django)
+  > [0414 - login_logout (django)](https://github.com/minseokkang8571/TIL/tree/master/web/0414)
   >
-  > 0420 - DB기본
+  > [0420 - DB기본](https://github.com/minseokkang8571/TIL/tree/master/web/0420)
   >
-  > 0421 - comment (django)
+  > [0421 - comment (django)](https://github.com/minseokkang8571/TIL/tree/master/web/0421)
   >
-  > 0428 - follow and like (django)
+  > [0428 - follow and like (django)](https://github.com/minseokkang8571/TIL/tree/master/web/0428)
   >
-  > 0511 - serializer (django)
+  > [0511 - serializer (django)](https://github.com/minseokkang8571/TIL/tree/master/web/0511)
   >
-  > 0601 - vue (vue)
+  > [0601 - vue (vue)](https://github.com/minseokkang8571/TIL/tree/master/web/0601)
   >
-  > 0602 - SPA (vue)
+  > [0602 - SPA (vue)](https://github.com/minseokkang8571/TIL/tree/master/web/0602)
   >
-  > 0603 - 바인딩 (vue)
+  > [0603 - 바인딩 (vue)](https://github.com/minseokkang8571/TIL/tree/master/web/0603)
   >
-  > 0605 - 프로젝트 배포 (netlify)
+  > [0605 - 프로젝트 배포 (netlify)](https://github.com/minseokkang8571/TIL/tree/master/web/0605)
   >
-  > 0608 - 가상환경 (python)
+  > [0608 - 가상환경 (python)](https://github.com/minseokkang8571/TIL/tree/master/web/0608)
   >
-  > 0609 - django api server
+  > [0609 - django api server](https://github.com/minseokkang8571/TIL/tree/master/web/0609)
   >
-  > 0611 - string to Date (vue)
+  > [0611 - string to Date (vue)](https://github.com/minseokkang8571/TIL/tree/master/web/0611)
   >
-  > 0622 - 1학기 관통프로젝트 배운점
+  > [0622 - 1학기 관통프로젝트 배운점](https://github.com/minseokkang8571/TIL/tree/master/web/0622)
   >
-  > 0625 - cors
+  > [0625 - cors](https://github.com/minseokkang8571/TIL/tree/master/web/0625)
   >
-  > 0629 - Dango ORM
+  > [0629 - Dango ORM](https://github.com/minseokkang8571/TIL/tree/master/web/0629)
 
 - `linux`
 
   - linux: 리눅스의 기본명령어, vim의 활용 등
 
-    >linux 기본 명령어1
+    >[linux 기본 명령어1](https://github.com/minseokkang8571/TIL/tree/master/linux/linux/linux 기본 명령어1)
     >
-    >linux 기본 명령어2
+    >[linux 기본 명령어2](https://github.com/minseokkang8571/TIL/tree/master/linux/linux/linux 기본 명령어2)
     >
-    >ubuntu 기초 세팅
+    >[ubuntu 기초 세팅](https://github.com/minseokkang8571/TIL/tree/master/linux/linux/ubuntu 기초 세팅)
   
   - git: git의 활용 정리
   
-    >diff
+    >[diff](https://github.com/minseokkang8571/TIL/tree/master/linux/git/diff)
     >
-    >reflog
+    >[reflog](https://github.com/minseokkang8571/TIL/tree/master/linux/git/reflog)
     >
-    >reset and revert
+    >[reset and revert](https://github.com/minseokkang8571/TIL/tree/master/linux/git/reset and revert)
     >
-    >branch
+    >[branch](https://github.com/minseokkang8571/TIL/tree/master/linux/git/branch)
     >
-    >stash
+    >[stash](https://github.com/minseokkang8571/TIL/tree/master/linux/git/stash)
     >
-    >병렬로 git 명령어 적용하기
+    >[병렬로 git 명령어 적용하기](https://github.com/minseokkang8571/TIL/tree/master/linux/git/병렬로 git 명령어 적용하기)
     >
-    >푸시한 커밋 author 수정하기
+    >[푸시한 커밋 author 수정하기](https://github.com/minseokkang8571/TIL/tree/master/linux/git/푸시한 커밋 author 수정하기)
     >
-    >git bash 환경에서 wget추가하기
+    >[git bash 환경에서 wget추가하기](https://github.com/minseokkang8571/TIL/tree/master/linux/git/git bash 환경에서 wget추가하기)
     >
-    >fork한 저장소 싱크 맞추기
+    >[fork한 저장소 싱크 맞추기](https://github.com/minseokkang8571/TIL/tree/master/linux/git/fork한 저장소 싱크 맞추기)
   
 - `k8s`: docker, k8s 환경 구축 및 내용 정리
   
-    > docker
+    > [docker](https://github.com/minseokkang8571/TIL/tree/master/k8s/docker)
   >
-  > vagrant box만들기
+  > [vagrant box만들기](https://github.com/minseokkang8571/TIL/tree/master/k8s/vagrant box만들기)
   >
-  > vagrant RawFile#0 에러
+  > [vagrant RawFile#0 에러](https://github.com/minseokkang8571/TIL/tree/master/k8s/vagrant RawFile#0 에러)
   
     
 
