@@ -1,14 +1,60 @@
 # 1. Docker
 
-Docker는 Linux기반 Container Runtime 오픈소스로 Virtual Machine (이하 VM)보다 가벼운 형태로 배포 할 수 있는 것이 특징이다. VM의 경우 Host OS가 깔리고, 그 위에 Hypervisor 그리고 Virtual Machine이 만들어진다. 때문에 배포를 받는 경우 Host OS를 전부 받아야한다. 
+Docker는 Linux기반 Container Runtime 오픈소스로 Virtual Machine (이하 VM)보다 가벼운 형태로 배포 할 수 있는 것이 특징이다. 아래의 그림을 보며 VM과 Docker의 차이를 알아보자. VM의 경우 Host OS가 깔리고, 그 위에 Hypervisor 그리고 Virtual Machine이 만들어진다. 때문에 배포를 받는 경우 Host OS를 전부 받아야한다. 
 
-하지만 Container의 경우, Kernel등의 OS를 포함하지 않은채로 배포를 하는데 Kernel의 경우 Host OS를 그대로 사용하며 Host OS와 Container OS의 다른 부분만 Container안에 담아 배포 하게 된다. 이러한 특징 때문에 Container에서 명령어를 수행하면 Host OS에서 명령어가 수행된다.
+![image-20200709105801788](images/image-20200709105801788.png)
+
+> **Docker와 가상머신의 차이** | 출처: [도커 공식 홈페이지](https://www.docker.com/resources/what-container)
 
 
 
-## 1.1 Docker 설치
+하지만 Container의 경우, Kernel등의 OS를 포함하지 않은채로 배포를 하는데 Kernel은 Host OS를 그대로 사용하며 Host OS와 Container OS의 다른 부분만 Container안에 담아 배포 하게 된다. 이러한 특징 때문에 Container에서 명령어를 수행하면 Host OS에서 명령어가 수행된다.
 
-git을 통해 docker를 설치
+
+
+## 1.1 도커는 어떻게 동작하는가
+
+![image-20200709112316459](images/image-20200709112316459.png)
+
+> **도커의 동작** | 출처: [freecodecamp](https://www.freecodecamp.org/news/docker-quick-start-video-tutorials-1dfc575522a0/)
+
+
+
+위 그림은 도커의 동작을 보여주는 좋은 예시이다. 도커는 위의 그림에서 보는바와 같이 Host OS를 기반으로 Docker Engine에 의해 동작하게 된다. 
+
+도커의 동작을 이해하기 위해선 Docker Engine이 무엇을 다루는가를 보면 좋다. 먼저 배포를 할 때, 설치시 필요한 라이브러리, 소스, OS(Host와 Container OS의 차이를 담은) 데이터를 가진 Dockerfile이 만들어진다. 이후 build를 통해 Docker Image가 되며 우리는 Docker Image를 공유하며 간단하게 앱을 배포하고 설치할 수 있다.
+
+Docker Image를 run하면 우리가 사용하는 Container가 만들어지고, 물론 하나의 Image로 여러개의 Container를 만들 수 있다.
+
+ 
+
+## 1.2 도커 설치
+
+> Docker for Windows와 linux에서의 설치를 다룬다.
+
+### 1.2.1 Docker for Windows
+
+[도커 공식 홈페이지](https://docs.docker.com/docker-for-windows/install/)에서 Docker Desktop을 다운로드
+
+![image-20200709111601892](images/image-20200709111601892.png)
+
+> **Docker Desktop을 다운로드할 수 있는 페이지**
+
+
+
+설치 이후에는 cmd나 shell을 통해 docker 명령어를 수행하면 된다. 설치 이후 버전을 확인해 설치가 제대로 되었는 지 확인하자.
+
+![image-20200709111739983](images/image-20200709111739983.png)
+
+> **도커의 버전**
+
+
+
+### 1.2.2 linux
+
+> Virtual Box를 기반으로 설치
+
+#### git을 통해 docker를 설치
 
 ```bash
 git clone https://github.com/dotcloud/docker.git
@@ -16,13 +62,15 @@ git clone https://github.com/dotcloud/docker.git
 
 
 
-## 1.2 Virtual box 설치
+#### Virtual box 설치
 
 [Virtual Box 공식 홈페이지](https://www.virtualbox.org/)에서 Virtual Box를 설치
 
 
 
-## 1.3 Vagrant
+#### Vagrant
+
+> VM실행에 Vagrant를 사용해보자
 
 Vagrant는 가상머신을 쉽게 Provisioning 할 수 있게 하는 툴로 생성과 관리시 사용한다. 가상머신의 Host name, IP, Service Install 등의 환경설정을 사용자의 요구에 맞게 할 수 있다.
 
@@ -31,7 +79,7 @@ Vagrant는 가상머신을 쉽게 Provisioning 할 수 있게 하는 툴로 생�
 
 
 
-### 명령어
+##### 명령어
 
 - vagrant init - vagrantfile을 생성
 - vagrant up - provisioning 실행
@@ -42,7 +90,7 @@ Vagrant는 가상머신을 쉽게 Provisioning 할 수 있게 하는 툴로 생�
 
 
 
-### 사용법
+##### 사용법
 
 - docker가 설치된 폴더로 이동
 
