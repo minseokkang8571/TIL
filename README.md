@@ -71,6 +71,8 @@
   > [0625 - cors](https://github.com/minseokkang8571/TIL/tree/master/web/0625)
   >
   > [0629 - Dango ORM](https://github.com/minseokkang8571/TIL/tree/master/web/0629)
+  >
+  > [0716 - Django vs Flask](web/0716/Django%20vs%20Flask.md)
 
 - `linux`
 
