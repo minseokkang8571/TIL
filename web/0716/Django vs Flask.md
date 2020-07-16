@@ -6,7 +6,7 @@
 
 ## 1.1 Django
 
-![image-20200716162536376](C:\Users\multicampus\Documents\VisualCodePjt\TIL\web\0716\images\image-20200716162536376.png)
+![image-20200716162536376](images/image-20200716162536376.png)
 
 > **Why Django?** | 출처: [장고 공식홈페이지](https://www.djangoproject.com/start/overview/)
 
@@ -16,7 +16,7 @@
 
 ### 기본적으로 제공되는 강력한 기능들
 
-![image-20200716163024533](C:\Users\multicampus\Documents\VisualCodePjt\TIL\web\0716\images\image-20200716163024533.png)
+![image-20200716163024533](images/image-20200716163024533.png)
 
 > **장고의 관리자 페이지**
 
@@ -34,7 +34,7 @@
 
 ## 1.2 Flask
 
-![image-20200716165346632](C:\Users\multicampus\Documents\VisualCodePjt\TIL\web\0716\images\image-20200716165346632.png)
+![image-20200716165346632](images/image-20200716165346632.png)
 
 > **플라스크 로고** | 출처: [플라스크 공식홈페이지](https://flask.palletsprojects.com/en/1.1.x/)
 
@@ -54,7 +54,7 @@
 
 실제로 게시판과 같은 많은 기능이 필요한 웹 사이트의 경우 장고가 개발 편리성과 생산성에서 이점이 있을 것이고, 간단한 REST API기반 웹이라면 플라스크가 더 좋은 선택지가 될 수 있다.
 
-![image-20200716171115274](C:\Users\multicampus\Documents\VisualCodePjt\TIL\web\0716\images\image-20200716171115274.png)
+![image-20200716171115274](images/image-20200716171115274.png)
 
 > **장고와 플라스크의 오픈소스 통계** | 출처: https://testdriven.io/blog/django-vs-flask/#security%20](https://testdriven.io/blog/django-vs-flask/#security
 
