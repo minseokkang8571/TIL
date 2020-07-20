@@ -1,6 +1,6 @@
 # 1. Gitflow
 
-`gitflow`는 병렬작업을 위한 브랜치 관리 전략으로 핵심이 되는 다섯종류의 브랜치를 중심으로 버전을 관리할 수 있게 해준다. 
+`gitflow`는 병렬작업을 위한 브랜치 관리 전략이며 핵심이 되는 다섯종류의 브랜치를 중심으로 버전을 관리할 수 있게 해준다. 
 
 
 
@@ -213,7 +213,7 @@ Date:   Mon Jul 20 08:47:26 2020 +0900
 
 ### 1.2.4 hotfix
 
-`release`에서의 버그나 변경사항을 수정한다.
+`master`에서의 버그나 변경사항을 수정한다.
 
 
 
@@ -249,7 +249,7 @@ $ git flow hotfix finish {버전}
 ```bash
 # 핫픽스 완료후에 태그가 붙은 것. commit을 master가 가르키고 있는 것을 볼 수 있다.
 $ git log
-commit 21f5585e04ff7caf84ef4a6fc31376bca5c27f09 (tag: v0.0.1, master)
+commit 21f5585e04ff7caf84ef4a6fc31376bca5c27f09 (tag: v0.0.2, master)
 Author: minseokkang8571 <kangminseok1001@gmail.com>
 Date:   Mon Jul 20 09:42:26 2020 +0900
 
