@@ -40,6 +40,8 @@
 
 `gitflow`를 시작하는 것은 어렵지 않다. os에 맞는 git(git bash)가 깔려있다면 설치할 필요없이 바로 사용가능하다.
 
+해당 사용법은 `gitflow`의 기초사용법을 작성했으며, upstream-origin의 워크플로우에서의 방법은 `(upstream-origin)`와 같이 체크해두었다.
+
 
 
 ### 1.2.1 시작하기
@@ -65,7 +67,7 @@ Version tag prefix? []
 
 ### 1.2.2 feature
 
-gitflow에서는 기존의 branch생성 명령어와 다르게 별도의 명령어를 사용하여 `feature`를 생성한다.
+`gitflow`에서는 기존의 branch생성 명령어와 다르게 별도의 명령어를 사용하여 `feature`를 생성한다.
 
 
 
@@ -89,7 +91,7 @@ $ git branch
 
 #### 브랜치 병합
 
-gitflow를 이용하면 브랜치를 개발하고 머지하고, 또 브랜치를 삭제하는 불편한 과정을 거칠 필요가 없다. 간단한 명령어 하나면 `feature`의 commit을 `develop`에 merge해주고 브랜치까지 삭제해준다.
+`gitflow`를 이용하면 브랜치를 개발하고 머지하고, 또 브랜치를 삭제하는 불편한 과정을 거칠 필요가 없다. 간단한 명령어 하나면 `feature`의 commit을 `develop`에 merge해주고 브랜치까지 삭제해준다.
 
 ```bash
 # 이 때, feature/{기능명}이 아닌 기능명만 입력하면 된다.
@@ -164,15 +166,44 @@ Switched to a new branch 'release/v0.0.1'
 
 
 
-#### 게시
+#### 게시 or upstream에 올리기
 
-> 게시외에 방법이 있는지 확인해봐야함
+- 게시
 
-`release`는 여러 개발자들이 commit을 할 수 있어야 하므로 게시를 하는것이 좋다.
+`release`는 여러 개발자들이 commit을 할 수 있어야 하므로 게시를 하여 수정할 수 있다.
 
 ```bash
 $ git flow release publish RELEASE
 ```
+
+
+
+- `release`를 `upstream`에 push하기(upstream-origin)
+
+upstream-origin의 형태로 워크플로우를 구성한 경우 `upstream`에 push하여, 개발자들이 pull하고 QA를 진행할 수 있다.
+
+```bash
+# upstream 원격저장소로 등록
+$ git remote add upstream {upstream 주소}
+```
+
+```bash
+$ git push upstream {브랜치명}
+```
+
+
+
+#### 버그픽스(upstream-origin)
+
+> 참조: [우아한 형제들 기술 블로그](https://woowabros.github.io/experience/2017/10/30/baemin-mobile-git-branch-strategy.html)
+
+`release`에서 발견한 버그의 경우 기존의 브랜치 생성법대로 생성하고 pull request(이하 PR)를 하는 방향으로 진행한다. 실제로 **upstream-origin**의 워크플로우에서는 `develop`, `bugfix`, `hotfix`등의 브랜치를 아래와 같이 **PR - merge를 통해 관리**해야한다.
+
+1. 버그 픽스를 위한 브랜치를 생성
+2. 버그를 수정
+3. origin으로 버그 픽스 브랜치를 push
+4. `release`에 버그 픽스 브랜치를 PR
+5. 리뷰를 통해 merge
 
 
 
@@ -187,6 +218,8 @@ $ git flow release finish {버전}
 위의 명령어를 사용하고 나면 태그를 붙일 수 있다.
 
 ![image-20200720123341518](images/image-20200720123341518.png)
+
+> **릴리즈 태그 설정.  초기에 주석처리되어있다.**
 
 태그를 붙인 이후에 자동으로 `develop`과 병합하게 된다.
 
@@ -244,7 +277,7 @@ $ git flow hotfix finish {버전}
 
 ![image-20200720125729141](images/image-20200720125729141.png)
 
-> **hotfix 태그설정. 초기에 주석처리되어있다.**
+> **hotfix 태그설정**
 
 ```bash
 # 핫픽스 완료후에 태그가 붙은 것. commit을 master가 가르키고 있는 것을 볼 수 있다.
@@ -266,8 +299,21 @@ Date:   Mon Jul 20 09:42:26 2020 +0900
 
 
 
-# 2. 참고이미지
+# 2. upstream-origin 워크플로우
+
+`gitflow`의 개념만으로 협업을 하게 될 경우, 누구나 `master`를 수정할 수 있고 하나의 origin을 가지기 때문에 코드작성에 소극적일 수 밖에 없다. 다양한 방식으로 안정성있는 협업을 하기 위해서는 개인 별로 upstream을 fork하고 아래와 같은 워크 플로우를 형성하는게 바람직하다.
 
 ![flow](https://t1.daumcdn.net/cfile/tistory/99E9D24E5E69CCF224)
 
 > **오픈소스, 협업에서 사용하는 저장소 구조** | 출처: 이미지 내 삽입
+
+
+
+위의 구조는 `upstream`이라고 하는 메인 원격 저장소, 각각의 개발자들이 fork를 통해 생성한 `origin` 그리고 실제 워크 디렉토리인 `local`로 이루어진다.
+
+실제 개발은 `local`에서 이루어지며, 각 개발자들은 `feature`에서 개발하고 `develop`으로 병합하는 방식으로 개발을 진행한다. 이 때 사용되는 원격 저장소는 `origin`이므로 메인 저장소인 `upstream`에 영향을 끼치지 않는다.
+
+기능적인 구현이 완료되고 `origin`의 `develop`에 문제가 없을 경우, 개발자는 `upstream`에 PR를 하고 프로젝트의 maintainer가 각 개발자들의 PR을 확인한 후 merge를 진행한다. 이로서 upstream이 갱신되므로 각 개발자들은 새로운 개발을 착수할 때마다 `upstream`으로 부터 `origin`으로 pull을 하는 과정을 거쳐야한다([해당문서참고](https://github.com/minseokkang8571/TIL/blob/master/linux/git/fork한%20저장소%20싱크%20맞추기/fork한%20저장소%20싱크맞추기.md)).
+
+앞서 버그픽스에서 언급된 것처럼 해당 워크플로우에서는 `develop`, `bugfix`, `hotfix`등의 브랜치를 **PR - merge를 통해 관리**하도록 한다. 
+
