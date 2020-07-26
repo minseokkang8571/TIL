@@ -75,6 +75,8 @@
   > [0716 - Django vs Flask](web/0716/Django%20vs%20Flask.md)
   >
   > [0723 - DRF password API](https://github.com/minseokkang8571/TIL/blob/master/web/0723/DRF%20password%20API.md)
+  >
+  > [0726 - 소셜로그인 (django)](https://github.com/minseokkang8571/TIL/blob/master/web/0726/소셜로그인.md)
 
 - `linux`
 
