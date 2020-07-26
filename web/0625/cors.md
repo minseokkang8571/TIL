@@ -81,12 +81,12 @@ MIDDLEWARE = [
 
 
 
-이후 헤더에 추가 할 주소를 등록해준다. `CORS_ORIGIN_ALOWW_ALL`을 True로 설정해 모든 호스트를 허용하거나 특정 리스트를 사용해 등록 할 수 있다.
+이후 헤더에 추가 할 주소를 등록해준다. `CORS_ORIGIN_ALLOW_ALL`을 True로 설정해 모든 호스트를 허용하거나 특정 리스트를 사용해 등록 할 수 있다.
 
 ```python
 # settings.py
 
-CORS_ORIGIN_ALOWW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True
 # or
 CORS_ORIGIN_WHITELIST = [
   "허용 할 도메인",
