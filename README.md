@@ -77,6 +77,8 @@
   > [0723 - DRF password API](https://github.com/minseokkang8571/TIL/blob/master/web/0723/DRF%20password%20API.md)
   >
   > [0726 - 소셜로그인 (django)](https://github.com/minseokkang8571/TIL/blob/master/web/0726/소셜로그인.md)
+  >
+  > [0730 - DRF admin custom](https://github.com/minseokkang8571/TIL/blob/master/web/0730/DRF%20admin%20custom.md)
 
 - `linux`
 
