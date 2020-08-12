@@ -104,25 +104,28 @@ openssl dhparam -out dhparam.pem 2048
 
 
 
-이제 Ngnix를 설정만이 남았다! https설정 후에는 기존의  80, 8000으로 listen을 하던 서버가 아닌 아래의 서버로 리다이렉트 되므로 기존 서버 설정을 옮겨주자(root, location등).
+이제 Ngnix를 설정만이 남았다! https설정 후에는 기존의  80, 8000으로 listen을 하던 서버가 아닌 아래의 서버로 리다이렉트 되므로 기존 서버 설정을 옮겨주자(root, location등). 80포트로 들어오는 서버에는 https로 리다이렉트를 해주는 `return 301 https://$host$request_uri;`만 있으면 된다(301은 리다이렉트를 뜻함).
+
+Mozila에서 얻은 설정값에서 키를 설정해주는 부분은 해당 경로의 맞게 수정을 해주어야한다.
 
 ```bash
 server {
         listen 80;
         listen 8000;
+        return 301 https://$host$request_uri;
 }
 server {
     	listen 443 ssl http2;
     	listen [::]:443 ssl http2;
 
-    	ssl_certificate /etc/letsencrypt/live/i3b307.p.ssafy.io/fullchain.pem; #
-    	ssl_certificate_key /etc/letsencrypt/live/i3b307.p.ssafy.io/privkey.pem;
+    	ssl_certificate /etc/letsencrypt/live/i3b307.p.ssafy.io/fullchain.pem; # 변경라인
+    	ssl_certificate_key /etc/letsencrypt/live/i3b307.p.ssafy.io/privkey.pem; # 변경라인
     	ssl_session_timeout 1d;
     	ssl_session_cache shared:MozSSL:10m;
     	ssl_session_tickets off;
 
     
-    	ssl_dhparam /etc/letsencrypt/live/i3b307.p.ssafy.io/dhparam.pem;
+    	ssl_dhparam /etc/letsencrypt/live/i3b307.p.ssafy.io/dhparam.pem; # 변경라인
 
     
     	ssl_protocols TLSv1.2 TLSv1.3;
@@ -137,7 +140,7 @@ server {
     	ssl_stapling_verify on;
 
     
-    	ssl_trusted_certificate /etc/letsencrypt/live/i3b307.p.ssafy.io/chain.pem;
+    	ssl_trusted_certificate /etc/letsencrypt/live/i3b307.p.ssafy.io/chain.pem; # 변경라인
 }                    
 ```
 
@@ -145,11 +148,15 @@ server {
 
 ## 1.3 적용확인
 
-도메인에 https가 잘 적용되었는지 확인하는 사이트가 있다. [SSL 인증서 확인 사이트](https://hiseon.me/tools/online-ssl-checker/)는 실제로 도메인에 인증서가 잘 적용되었는지 관련 내용을 서비스한다.
+도메인에 https가 잘 적용되었는지 확인하는 사이트가 있다. [SSL Labs](https://www.ssllabs.com/ssltest/analyze.html)는 실제로 연결을 테스트하며, 연결 상황과 키교환 등 많은 요소를 채점해 등급을 제공한다.
 
-![image-20200812113403460](images/image-20200812113403460.png)
+![image-20200812115441024](images/image-20200812113403460.png)
 
 > **SSL 인증서 확인 사이트**
+
+![image-20200812120950947](images/image-20200812120950947.png)
+
+> **SSL Labs의 handshaking 시뮬레이션**
 
 
 
