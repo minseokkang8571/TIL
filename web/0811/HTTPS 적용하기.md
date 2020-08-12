@@ -2,7 +2,7 @@
 
 HTTPS(Hypertext Transfer Protocol Secure)는 기존의 HTTP에서 보안성을 더한 프로토콜로, 비대칭 암호화 통신을 통해 데이터를 탈취 당하더라도 내용이 유출되지않는 장점을 가지고 있다. 비대칭 암호화 방식은 암호화와 복호화의 키가 다른 방식을 의미하는데, 송신자의 신원을 보장하기위해 공개키와 함께 CA(Certification Authority)의 서명을 보낼 필요가 있다. 수신자는 공개키 + 서명을 받고, 내용을 암호화해서 전송하고 송신자는 비공개키를 이용해 복호화를 하게 되는 방식이다.
 
-이 서명을 SSL인증서라고 하는데, 원래는 인증된 기관(CA)로 부터 발급 받아야 하지만 이 문서에서는 Let's Encrypt를 통해 무료로 인증서를 받고 적용해보도록 하겠다.
+이 서명을 SSL인증서라고 하는데, 원래는 유료로 인증된 기관(CA)로 부터 발급 받아야 하지만 이 문서에서는 Let's Encrypt를 통해 무료로 인증서를 받고 적용해보도록 하겠다.
 
 
 
@@ -94,4 +94,68 @@ $ openssl version
 > **Mozilla ssl config gen의 결과**
 
 
+
+Nginx설정을 하기전에, 먼저 SSL설정에 필요한 파일을 생성하자. 다음 명령어를 사용하면 기이한 로딩이 진행되고 `dhparam.pem` 파일이 생선된다.
+
+```bash
+cd /etc/letsencrypt/live/{도메인명}/
+openssl dhparam -out dhparam.pem 2048
+```
+
+
+
+이제 Ngnix를 설정만이 남았다! https설정 후에는 기존의  80, 8000으로 listen을 하던 서버가 아닌 아래의 서버로 리다이렉트 되므로 기존 서버 설정을 옮겨주자(root, location등).
+
+```bash
+server {
+        listen 80;
+        listen 8000;
+}
+server {
+    	listen 443 ssl http2;
+    	listen [::]:443 ssl http2;
+
+    	ssl_certificate /etc/letsencrypt/live/i3b307.p.ssafy.io/fullchain.pem; #
+    	ssl_certificate_key /etc/letsencrypt/live/i3b307.p.ssafy.io/privkey.pem;
+    	ssl_session_timeout 1d;
+    	ssl_session_cache shared:MozSSL:10m;
+    	ssl_session_tickets off;
+
+    
+    	ssl_dhparam /etc/letsencrypt/live/i3b307.p.ssafy.io/dhparam.pem;
+
+    
+    	ssl_protocols TLSv1.2 TLSv1.3;
+    	ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384;
+    	ssl_prefer_server_ciphers off;
+
+    
+    	add_header Strict-Transport-Security "max-age=63072000" always;
+
+    
+    	ssl_stapling on;
+    	ssl_stapling_verify on;
+
+    
+    	ssl_trusted_certificate /etc/letsencrypt/live/i3b307.p.ssafy.io/chain.pem;
+}                    
+```
+
+
+
+## 1.3 적용확인
+
+도메인에 https가 잘 적용되었는지 확인하는 사이트가 있다. [SSL 인증서 확인 사이트](https://hiseon.me/tools/online-ssl-checker/)는 실제로 도메인에 인증서가 잘 적용되었는지 관련 내용을 서비스한다.
+
+![image-20200812113403460](images/image-20200812113403460.png)
+
+> **SSL 인증서 확인 사이트**
+
+
+
+또한, 실제로 도메인을 들어가보면 https://로 리다이렉트 되며 자물쇠 표시가 뜨는 걸 볼 수 있다.
+
+![image-20200812113252723](images/image-20200812113252723.png)
+
+> **HTTPS 적용 확인**
 
