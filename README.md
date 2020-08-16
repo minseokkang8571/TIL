@@ -79,6 +79,14 @@
   > [0726 - 소셜로그인 (django)](https://github.com/minseokkang8571/TIL/blob/master/web/0726/소셜로그인.md)
   >
   > [0730 - DRF admin custom](https://github.com/minseokkang8571/TIL/blob/master/web/0730/DRF%20admin%20custom.md)
+  >
+  > [0809 - 웹 서버배포하기](https://github.com/minseokkang8571/TIL/blob/master/web/0809/%EC%9B%B9%20%EC%84%9C%EB%B2%84%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0.md)
+  >
+  > [0811 - HTTPS 적용하기](https://github.com/minseokkang8571/TIL/blob/master/web/0811/HTTPS%20%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0.md)
+  >
+  > [0814 - postgreSQL 사용하기 (Django)](https://github.com/minseokkang8571/TIL/blob/master/web/0814/Django%20postgreSQL%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0.md)
+  >
+  > [0815 - 이미지 업로드 크기제한 설정하기](https://github.com/minseokkang8571/TIL/blob/master/web/0815/%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%97%85%EB%A1%9C%EB%93%9C%20%ED%81%AC%EA%B8%B0%EC%A0%9C%ED%95%9C%20%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.md)
 
 - `linux`
 
