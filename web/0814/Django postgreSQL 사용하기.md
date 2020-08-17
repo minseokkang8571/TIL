@@ -103,8 +103,8 @@ postgres=#
 
 이제 비밀번호를 설정해주자.
 
-```bash
-$ alter user {유저이름} with password '{비밀번호}'
+```sql
+postgres=# alter user {유저이름} with password '{비밀번호}'
 ```
 
 
