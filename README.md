@@ -88,7 +88,7 @@
   >
   > [0815 - 이미지 업로드 크기제한 설정하기](https://github.com/minseokkang8571/TIL/blob/master/web/0815/%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%97%85%EB%A1%9C%EB%93%9C%20%ED%81%AC%EA%B8%B0%EC%A0%9C%ED%95%9C%20%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.md)
   >
-  > [0821 - serializer 필드에 속성 적용하기](https://github.com/minseokkang8571/TIL/blob/master/web/0821/serializer%20%ED%95%84%EB%93%9C%EC%97%90%20%EC%86%8D%EC%84%B1%20%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0.md)
+  > [0821 - serializer 필드에 속성 적용하기 (Django)](https://github.com/minseokkang8571/TIL/blob/master/web/0821/serializer%20%ED%95%84%EB%93%9C%EC%97%90%20%EC%86%8D%EC%84%B1%20%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0.md)
 
 - `linux`
 
