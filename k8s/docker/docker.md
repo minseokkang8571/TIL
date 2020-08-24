@@ -24,7 +24,7 @@ Docker는 Linux기반 Container Runtime 오픈소스로 Virtual Machine (이하 
 
 도커의 동작을 이해하기 위해선 Docker Engine이 무엇을 다루는가를 보면 좋다. 먼저 배포를 할 때, 설치시 필요한 라이브러리, 소스, OS(Host와 Container OS의 차이를 담은) 데이터를 가진 Dockerfile이 만들어진다. 이후 build를 통해 Docker Image가 되며 우리는 Docker Image를 공유하며 간단하게 앱을 배포하고 설치할 수 있다.
 
-Docker Image를 run하면 우리가 사용하는 Container가 만들어지고, 물론 하나의 Image로 여러개의 Container를 만들 수 있다.
+Docker Image를 run하면 우리가 사용하는 Container가 만들어지고, 물론 하나의 Image로 여러개의 Container를 만들 수 있으며 이미지를 공유할 수 있는 [docker hub](https://hub.docker.com/)가 존재한다.
 
  
 

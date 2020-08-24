@@ -18,7 +18,7 @@
   >
   > [0313 - array and function (JS)](https://github.com/minseokkang8571/TIL/tree/master/web/0313)
   >
-  > [0316 - dom and evend (JS)](https://github.com/minseokkang8571/TIL/tree/master/web/0316)
+  > [0316 - dom and event (JS)](https://github.com/minseokkang8571/TIL/tree/master/web/0316)
   >
   > [0317 - card (bootstrap)](https://github.com/minseokkang8571/TIL/tree/master/web/0317)
   >
