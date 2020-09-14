@@ -91,6 +91,10 @@
   > [0821 - serializer 필드에 속성 적용하기 (Django)](https://github.com/minseokkang8571/TIL/blob/master/web/0821/serializer%20%ED%95%84%EB%93%9C%EC%97%90%20%EC%86%8D%EC%84%B1%20%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0.md)
   >
   > [0829 - JDK cmd에러픽스 (Spring)](https://github.com/minseokkang8571/TIL/blob/master/web/0829/JDK%20cmd%EC%97%90%EB%9F%AC%ED%94%BD%EC%8A%A4.md)
+  >
+  > [0901 - DI](https://github.com/minseokkang8571/TIL/blob/master/web/0901/DI.md)
+  >
+  > [0902 - Controller](https://github.com/minseokkang8571/TIL/blob/master/web/0902/Controller.md)
 
 - `linux`
 
